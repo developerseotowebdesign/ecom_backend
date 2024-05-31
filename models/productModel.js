@@ -53,6 +53,13 @@ const productSchema = new mongoose.Schema(
         },
         variations: {
             type: Object,
+        }, 
+        variant_products: {
+            type: Object,
+        },
+        type: {
+            type: Boolean,
+            default: false,
         },
         specifications: {
             type: Object,
