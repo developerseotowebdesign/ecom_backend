@@ -1030,7 +1030,7 @@ export const updateProductAdmin = async (req, res) => {
       metaKeywords,
       Category,
       tag, features,
-      specifications, weight, gst, hsn, sku
+      specifications, weight, gst, hsn, sku,  variant_products,type 
     } = req.body;
 
     let updateFields = {
@@ -1049,7 +1049,7 @@ export const updateProductAdmin = async (req, res) => {
       metaKeywords,
       Category,
       tag, features,
-      specifications, weight, gst, hsn, sku
+      specifications, weight, gst, hsn, sku,variant_products,type 
     };
 
     const Product = await productModel.findByIdAndUpdate(id, updateFields, {
