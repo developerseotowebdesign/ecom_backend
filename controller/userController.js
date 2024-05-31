@@ -673,7 +673,7 @@ export const UsergetAllCategories = async (req, res) => {
 export const UsergetAllProducts = async (req, res) => {
 
   try {
-    const products = await productModel.find({ status: 'true' }, '_id title');
+    const products = await productModel.find({ status: 'true' }, '_id title slug');
 
     if (!products) {
       return res.status(200).send
@@ -706,7 +706,7 @@ export const UsergetAllProducts = async (req, res) => {
 export const UsergetAllHomeProducts = async (req, res) => {
 
   try {
-    const products = await productModel.find({}, '_id title pImage regularPrice salePrice stock');
+    const products = await productModel.find({}, '_id title pImage regularPrice salePrice stock slug variant_products variations');
 
     if (!products) {
       return res.status(200).send
